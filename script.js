@@ -62,7 +62,7 @@ for(var i in zucchine){
     peso += parseInt(zuc.peso);
     
 }
-
+console.log('Peso totale delle zucchine:')
 console.log(peso);
 
 //Jsnack 2
@@ -102,3 +102,33 @@ console.log("Peso zucchine lunghe:");
 console.log(pesoZucchineLunghe);
 
 //jsnack 3
+
+var arrayUno = [ 1, 2, 3, 3, 4, 5];
+var arrayDue = ['A', 'B', 'C', 'D', 'E'];
+var dueArray =[];
+
+unicoArray(arrayUno, arrayDue, dueArray);
+
+
+
+function unicoArray(primoArray, secondoArray, unioneArray){
+   
+    for(i in primoArray){
+        
+        if(primoArray !== undefined && secondoArray !== undefined){
+        unioneArray.push(primoArray[i]);
+        unioneArray.push(secondoArray[i]);
+    }
+    }
+    
+    return unioneArray;
+}
+console.log('Unione di due array');
+console.log(dueArray);
+
+//jsnack 4
+
+/* Creare una squadra di basket e per ogni giocatore generare casualmente le statistiche di gioco, secondo queste regole:
+il codice giocatore deve essere formato da 3 lettere maiuscole casuali e 3 cifre casuali
+la media punti fatti per partita deve essere compresa tra 0 e 50
+la percentuale di successo per da 3 punti deve essere compresa tra 0 e 100 */
