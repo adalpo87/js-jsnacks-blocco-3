@@ -132,3 +132,19 @@ console.log(dueArray);
 il codice giocatore deve essere formato da 3 lettere maiuscole casuali e 3 cifre casuali
 la media punti fatti per partita deve essere compresa tra 0 e 50
 la percentuale di successo per da 3 punti deve essere compresa tra 0 e 100 */
+
+//Creo due array, uno della squadra e uno giocatore.
+
+var arraySquadra = [];
+
+var arrayGiocatore = [];
+
+
+//devo creare 3 funzioni
+
+//funzione che genera il codice giocatore formato da 3 lettere maiuscole e 3 cifre casuali
+
+//funzione che calcola la media punti fatta per partita compresa tra 0 e 50
+
+//funzione che calcola la % di successo per i tiri da 3 punti, da 0 a 100
+
