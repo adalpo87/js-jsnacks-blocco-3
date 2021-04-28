@@ -1,25 +1,49 @@
-/* Scrivi una funzione che accetti tre argomenti:
-un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
-La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b” */
+//jsnack4
 
 
-$(function(){
+var arraySquadra = [
+  {
+   nome: "Marco"
+  },
+  {
+    nome: "Alessandro"
+   },
+   {
+    nome: "Stefano"
+   },
+   {
+    nome: "Mario"
+   },
+   {
+    nome: "Andrea"
+   }
+];
 
-  var mioArray = "QuestoèUnArray";
-  var a = 3;
-  var b = 8;
-  var nuovoArray = findList(mioArray, a, b);
+for (var player of arraySquadra){
+  player.code = codegen();
+  player.media = rdmNumber(0, 50);
+  player.perc = rdmNumber(0, 100);
+}
 
+console.log(arraySquadra);
 
-  console.log(nuovoArray);
-
+//generatore di codici
+function codegen(){
+  var code = "";
+//generazione del codice
+  var alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","U","V","W","X","Y","Z"];
+//codice
+  while (code.length < 3){
+    code += alfabeto[rdmNumber(0, alfabeto.length - 1)]
+  }
   
-});
+  while (code.length < 6){
+    code += rdmNumber(0,9);
+  }
+  return code;
+}
 
-
-
-//funzioni
-
-function findList(array, a, b){
-  return array.slice(a, b);
+//generatore di numeri casuali
+function rdmNumber(min, max){
+  return Math.floor(Math.random()*(max - min + 1)+min);
 }
